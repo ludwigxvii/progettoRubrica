@@ -6,12 +6,12 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="966.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.it.unisa.diem.softeng.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="891.0" prefWidth="966.0" stylesheets="@stile.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.it.unisa.diem.softeng.FXMLDocumentController">
     <children>
         <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
       <SplitPane dividerPositions="0.4774436090225564" layoutY="22.0" orientation="VERTICAL" prefHeight="724.0" prefWidth="966.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="484.0" prefWidth="964.0">
+          <AnchorPane id="base" minHeight="0.0" minWidth="0.0" prefHeight="484.0" prefWidth="964.0">
                <children>
                   <TabPane layoutX="6.0" prefHeight="378.0" prefWidth="964.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-0.0" AnchorPane.topAnchor="0.0">
                     <tabs>
@@ -38,7 +38,7 @@
                               </Pane>
                            </content>
                         </Tab>
-                        <Tab text="Modifica">
+                        <Tab closable="false" text="Modifica">
                            <content>
                               <Pane prefHeight="338.0" prefWidth="964.0">
                                  <children>
@@ -47,11 +47,11 @@
                                     <Label layoutX="499.0" layoutY="92.0" text="Cognome" />
                                     <Label layoutX="41.0" layoutY="147.0" text="Indirizzi E-Mail" />
                                     <Label layoutX="514.0" layoutY="147.0" text="Numeri di telefono" />
-                                    <TextField fx:id="modNome" layoutX="186.0" layoutY="86.0" />
-                                    <TextField fx:id="modCognome" layoutX="577.0" layoutY="86.0" />
-                                    <TextField fx:id="modMail1" layoutX="145.0" layoutY="142.0" />
-                                    <TextField fx:id="modMail2" layoutX="145.0" layoutY="181.0" />
-                                    <TextField fx:id="modMail3" layoutX="145.0" layoutY="221.0" />
+                                    <TextField fx:id="modNome" layoutX="209.0" layoutY="70.0" />
+                                    <TextField fx:id="modCognome" layoutX="577.0" layoutY="70.0" />
+                                    <TextField fx:id="modMail1" layoutX="209.0" layoutY="120.0" />
+                                    <TextField fx:id="modMail2" layoutX="209.0" layoutY="170.0" />
+                                    <TextField fx:id="modMail3" layoutX="209.0" layoutY="220.0" />
                                     <TextField fx:id="modTel1" layoutX="646.0" layoutY="141.0" />
                                     <TextField fx:id="modTel2" layoutX="646.0" layoutY="181.0" />
                                     <TextField fx:id="modTel3" layoutX="646.0" layoutY="221.0" />

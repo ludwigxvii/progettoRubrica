@@ -1,0 +1,36 @@
+#base{
+    
+    -fx-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    -fx-font-size:20px;
+    -fx-text-fill: white;
+}
+#tabpane{
+
+   -fx-background-color: rgb(250, 196, 159);
+}
+.tab{
+
+    -fx-background-color: rgb(237, 137, 71);
+    
+    
+}
+
+.tab .tab-label{-fx-text-fill: white;}
+.tab-header-background{
+    -fx-background-color:  rgb(250, 196, 159);
+    
+}
+.text-field{
+    
+    -fx-background-radius:18px;
+    
+    -fx-background-color: rgb(250, 196, 159);
+
+}
+.button{
+  
+    -fx-background-radius:18px;
+    
+    -fx-background-color: rgb(192, 93, 27);
+    -fx-text-fill: white;
+}
