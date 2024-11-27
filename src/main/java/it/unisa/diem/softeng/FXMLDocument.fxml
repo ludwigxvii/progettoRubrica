@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -7,10 +8,10 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="956.0" prefWidth="966.0" stylesheets="@stile.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.it.unisa.diem.softeng.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="956.0" prefWidth="966.0" style="-fx-background-color: rgb(192, 93, 27);" stylesheets="@stile.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.it.unisa.diem.softeng.FXMLDocumentController">
     <children>
         <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
-      <SplitPane dividerPositions="0.4774436090225564" layoutY="22.0" orientation="VERTICAL" prefHeight="724.0" prefWidth="966.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <SplitPane dividerPositions="0.4774436090225564" layoutY="22.0" orientation="VERTICAL" pickOnBounds="false" prefHeight="724.0" prefWidth="966.0" style="-fx-background-color: rgb(192, 93, 27);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
           <AnchorPane id="base" minHeight="0.0" minWidth="0.0" prefHeight="484.0" prefWidth="964.0">
                <children>
@@ -42,12 +43,19 @@
                                        </font></Label>
                                     <TextField fx:id="nome" layoutX="160.0" layoutY="88.0" />
                                     <TextField fx:id="cognome" layoutX="577.0" layoutY="88.0" />
-                                    <TextField fx:id="mail1" layoutX="160.0" layoutY="138.0" promptText="Indirizzo 1" />
-                                    <TextField fx:id="mail2" layoutX="160.0" layoutY="188.0" promptText="Indirizzo 2" />
-                                    <TextField fx:id="mail3" layoutX="160.0" layoutY="238.0" promptText="Indirizzo 3" />
-                                    <TextField fx:id="tel1" layoutX="577.0" layoutY="138.0" promptText="Numero 1" />
-                                    <TextField fx:id="tel2" layoutX="577.0" layoutY="188.0" promptText="Numero 2" />
-                                    <TextField fx:id="tel3" layoutX="577.0" layoutY="238.0" promptText="Numero 3" />
+                                    <TextField fx:id="mail1" layoutX="160.0" layoutY="138.0" promptText="  Indirizzo 1" />
+                                    <TextField fx:id="mail2" layoutX="160.0" layoutY="188.0" promptText="  Indirizzo 2" />
+                                    <TextField fx:id="mail3" layoutX="160.0" layoutY="238.0" promptText="  Indirizzo 3" />
+                                    <TextField fx:id="tel1" layoutX="577.0" layoutY="138.0" promptText="  Numero 1" />
+                                    <TextField fx:id="tel2" layoutX="577.0" layoutY="188.0" promptText="  Numero 2" />
+                                    <TextField fx:id="tel3" layoutX="577.0" layoutY="238.0" promptText="  Numero 3">
+                                       <contextMenu>
+                                          <ContextMenu>
+                                            <items>
+                                              <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                                            </items>
+                                          </ContextMenu>
+                                       </contextMenu></TextField>
                                     <Button fx:id="aggiungiContatto" layoutX="166.0" layoutY="306.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="218.0" text="Angiungi Contatto" />
                                     <Button fx:id="cancellaCampi" layoutX="587.0" layoutY="306.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="218.0" style="-fx-background-color: red;" text="Cancella" />
                                  </children>
@@ -56,7 +64,7 @@
                         </Tab>
                         <Tab closable="false" text="Modifica">
                            <content>
-                              <Pane prefHeight="338.0" prefWidth="964.0" style="-fx-background-color: rgb(237, 137, 71);">
+                              <Pane prefHeight="338.0" prefWidth="964.0" style="-fx-background-color: rgb(237, 137, 71); -fx-border-style: none;">
                                  <children>
                                     <Label alignment="CENTER" layoutX="3.0" layoutY="14.0" prefHeight="41.0" prefWidth="961.0" text="Modifica o elimina un Contatto già presente." textAlignment="CENTER" textFill="WHITE">
                                        <font>
@@ -80,15 +88,78 @@
                                        </font></Label>
                                     <TextField fx:id="modNome" layoutX="160.0" layoutY="88.0" />
                                     <TextField fx:id="modCognome" layoutX="577.0" layoutY="88.0" />
-                                    <TextField fx:id="modMail1" layoutX="160.0" layoutY="138.0" promptText="Indirizzo 1" />
-                                    <TextField fx:id="modMail2" layoutX="160.0" layoutY="188.0" promptText="Indirizzo 2" />
-                                    <TextField fx:id="modMail3" layoutX="160.0" layoutY="238.0" promptText="Indirizzo 3" />
-                                    <TextField fx:id="modTel1" layoutX="577.0" layoutY="138.0" promptText="Numero 1" />
-                                    <TextField fx:id="modTel2" layoutX="577.0" layoutY="188.0" promptText="Numero 2" />
-                                    <TextField fx:id="modTel3" layoutX="577.0" layoutY="238.0" promptText="Numero 3" />
+                                    <TextField fx:id="modMail1" layoutX="160.0" layoutY="138.0" promptText=" Indirizzo 1" />
+                                    <TextField fx:id="modMail2" layoutX="160.0" layoutY="188.0" promptText=" Indirizzo 2" />
+                                    <TextField fx:id="modMail3" layoutX="160.0" layoutY="238.0" promptText=" Indirizzo 3" />
+                                    <TextField fx:id="modTel1" layoutX="577.0" layoutY="138.0" promptText=" Numero 1" />
+                                    <TextField fx:id="modTel2" layoutX="577.0" layoutY="188.0" promptText=" Numero 2" />
+                                    <TextField fx:id="modTel3" layoutX="577.0" layoutY="238.0" promptText=" Numero 3" />
                                     <Button fx:id="ricercaContatto" layoutX="174.0" layoutY="305.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="201.0" text="Ricerca Contatto" />
                                     <Button fx:id="eliminaContatto" layoutX="386.0" layoutY="305.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="196.0" style="-fx-background-color: red;" text="Elimina Contatto" />
                                     <Button fx:id="inviaModifiche" layoutX="588.0" layoutY="305.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="207.0" text="Invia Modifiche" />
+                                 </children>
+                              </Pane>
+                           </content>
+                        </Tab>
+                        <Tab closable="false" text="Ricerca">
+                           <content>
+                              <Pane prefHeight="342.0" prefWidth="964.0" style="-fx-background-color: rgb(237, 137, 71);">
+                                 <children>
+                                    <Label alignment="CENTER" layoutX="3.0" layoutY="14.0" prefHeight="48.0" prefWidth="961.0" text="Ricerca un Contatto nella tua Rubrica" textFill="WHITE" wrapText="true">
+                                       <font>
+                                          <Font size="29.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="294.0" layoutY="97.0" text="Nome" textFill="WHITE">
+                                       <font>
+                                          <Font size="27.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="251.0" layoutY="193.0" text="Cognome" textFill="WHITE">
+                                       <font>
+                                          <Font size="27.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="nomeRicerca" layoutX="375.0" layoutY="97.0" />
+                                    <TextField fx:id="cognomeRicerca" layoutX="375.0" layoutY="193.0" />
+                                    <Button fx:id="ricercaContatto" layoutX="381.0" layoutY="287.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="218.0" text="Ricerca" />
+                                 </children>
+                              </Pane>
+                           </content>
+                        </Tab>
+                        <Tab closable="false" text="Salva/Carica">
+                           <content>
+                              <Pane prefHeight="342.0" prefWidth="964.0" style="-fx-background-color: rgb(237, 137, 71);">
+                                 <children>
+                                    <Label alignment="CENTER" layoutX="63.0" layoutY="14.0" prefHeight="89.0" prefWidth="838.0" text="Salva la Rubrica attualmente in uso nella Directory, oppure carica uno stato da un file già presente in essa." textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                       <font>
+                                          <Font size="29.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="214.0" layoutY="149.0" text="Nome File" textFill="WHITE">
+                                       <font>
+                                          <Font size="27.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="635.0" layoutY="149.0" text="Nome File" textFill="WHITE">
+                                       <font>
+                                          <Font size="27.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="nomeCarica" layoutX="166.0" layoutY="203.0" />
+                                    <TextField fx:id="nomeSalva" layoutX="581.0" layoutY="203.0" />
+                                    <Button fx:id="bottoneCarica" layoutX="172.0" layoutY="306.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="218.0" text="Carica Rubrica" />
+                                    <Label layoutX="405.0" layoutY="203.0" text=".txt" textFill="WHITE">
+                                       <font>
+                                          <Font size="27.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="818.0" layoutY="203.0" text=".txt" textFill="WHITE">
+                                       <font>
+                                          <Font size="27.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="bottoneSalva" layoutX="587.0" layoutY="306.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="218.0" text="Salva Rubrica" />
                                  </children>
                               </Pane>
                            </content>
@@ -97,14 +168,14 @@
                   </TabPane>
                </children>
             </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: rgb(192, 93, 27);;">
                <children>
                   <TableView fx:id="tabellaRubrica" layoutX="87.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: rgb(237, 137, 71);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <columns>
-                      <TableColumn minWidth="130.0" prefWidth="130.0" text="Nome" />
-                      <TableColumn minWidth="170.0" prefWidth="170.0" text="Cognome" />
-                        <TableColumn minWidth="170.0" prefWidth="170.0" text="E-Mail" />
-                        <TableColumn minWidth="170.0" prefWidth="170.0" text="Numeri di telefono" />
+                      <TableColumn editable="false" minWidth="130.0" prefWidth="130.0" text="Nome" />
+                      <TableColumn editable="false" minWidth="170.0" prefWidth="217.0" text="Cognome" />
+                        <TableColumn editable="false" minWidth="170.0" prefWidth="288.0" sortable="false" text="E-Mail" />
+                        <TableColumn editable="false" minWidth="170.0" prefWidth="328.0" sortable="false" text="Numeri di telefono" />
                     </columns>
                   </TableView>
                </children>
