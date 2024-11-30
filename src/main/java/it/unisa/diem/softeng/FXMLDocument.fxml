@@ -56,7 +56,7 @@
                                             </items>
                                           </ContextMenu>
                                        </contextMenu></TextField>
-                                    <Button fx:id="aggiungiContatto" layoutX="166.0" layoutY="306.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="218.0" text="Angiungi Contatto" />
+                                    <Button fx:id="aggiungiContatto" layoutX="166.0" layoutY="306.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="218.0" text="Aggiungi Contatto" />
                                     <Button fx:id="cancellaCampi" layoutX="587.0" layoutY="306.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="218.0" style="-fx-background-color: red;" text="Cancella" />
                                  </children>
                               </Pane>

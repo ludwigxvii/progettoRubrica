@@ -66,6 +66,18 @@ public class FXMLDocumentController implements Initializable {
     private Button inviaModifiche;
     @FXML
     private TableView<?> tabellaRubrica;
+    @FXML
+    private TextField nomeRicerca;
+    @FXML
+    private TextField cognomeRicerca;
+    @FXML
+    private TextField nomeCarica;
+    @FXML
+    private TextField nomeSalva;
+    @FXML
+    private Button bottoneCarica;
+    @FXML
+    private Button bottoneSalva;
 
     /**
      * Initializes the controller class.

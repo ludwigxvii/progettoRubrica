@@ -3,34 +3,118 @@
     -fx-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     -fx-font-size:20px;
     -fx-text-fill: white;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 2, 2, 2, 3);
 }
 #tabpane{
+    -fx-border-style: none;
 
    -fx-background-color: rgb(250, 196, 159);
 }
 .tab{
 
-    -fx-background-color: rgb(237, 137, 71);
+    -fx-background-color: rgb(250, 196, 159);
     
     
 }
 
-.tab .tab-label{-fx-text-fill: white;}
+.tab .tab-label{
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 2, 2, 2, 3);
+    -fx-cursor:hand;
+}
+.tab:selected .tab-label{
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 2, 2, 2, 3);
+}
 .tab-header-background{
     -fx-background-color:  rgb(250, 196, 159);
     
 }
 .text-field{
-    
     -fx-background-radius:18px;
-    
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 2, 2, 2, 3);
     -fx-background-color: rgb(250, 196, 159);
-
+    -fx-prompt-text-fill: rgba(192, 93, 27, 0.403);
 }
+
 .button{
   
     -fx-background-radius:18px;
-    
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 2, 2, 2, 3);
     -fx-background-color: rgb(192, 93, 27);
     -fx-text-fill: white;
+    -fx-cursor:hand;
+}
+.button:pressed {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 1, 2, 2, 3);
+    -fx-background-color: rgb(255, 81, 0);
+}
+.table-view .filler{
+    -fx-background-color: rgb(192, 93, 27);
+}
+.table-view .column-header-background{
+    -fx-background-color: rgb(192, 93, 27);
+}
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+.table-view .column-header-background{
+    -fx-background-color: rgb(192, 93, 27);
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 1, 2, 2, 3);
+    -fx-text-fill: white;
+}
+.table-view .table-cell{
+    -fx-text-fill: white;
+}
+.table-view{
+    -fx-background-color:rgb(192, 93, 27);
+ }
+.table-view{
+    
+    -fx-text-fill: white;
+ }
+ .split-pane-divider {
+    -fx-padding: 0 ;
+  }
+  #tabellaRubrica{
+    -fx-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    -fx-font-size:20px;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 1, 2, 2, 3);
+  }
+  .tab-pane:focused > .tab-header-area > .headers-region > .tab:selected .focus-indicator {
+    
+    -fx-border-style: none;
+}
+.tab-pane:focused > .tab-header-area > .headers-region > .tab:selected {
+    -fx-size:150%;
+    -fx-padding: 10px 50px 5px 50px;
+    
+    -fx-background-color: rgb(237, 137, 71);
+    -fx-background-radius:20px 50px 0px 0px;
+}
+
+.tab-pane:focused > .tab-header-area{
+    -fx-border-style: none;
+
+}
+.tab-pane > .pane{
+    -fx-border-style: none;
+
+}
+.tab-pane:focused > .tab-header-area > .headers-region{
+    -fx-border-style: none;
+   
+
+}
+.tab-pane .tab{
+    -fx-background-insets: 0 0 0 0,0,0;
+    
+}
+.label{
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 2, 2, 2, 3);
 }
