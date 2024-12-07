@@ -8,7 +8,7 @@ import java.util.TreeSet;
 
 /**
  *
- * @author ludwi
+ * @author ludwig
  */
 public class Rubrica {
     TreeSet<Contatto> rubrica;

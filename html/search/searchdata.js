@@ -1,21 +1,18 @@
 var indexSectionsWithContent =
 {
-  0: "fimp",
-  1: "fp",
-  2: "im"
+  0: "cr",
+  1: "cr"
 };
 
 var indexSectionNames =
 {
   0: "all",
-  1: "classes",
-  2: "functions"
+  1: "classes"
 };
 
 var indexSectionLabels =
 {
   0: "Tutto",
-  1: "Classi",
-  2: "Funzioni"
+  1: "Classi"
 };
 
