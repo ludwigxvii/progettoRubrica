@@ -12,6 +12,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 
 /**
  * FXML Controller class
@@ -71,11 +72,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private TextField cognomeRicerca;
     @FXML
-    private TextField nomeCarica;
-    @FXML
-    private TextField nomeSalva;
-    @FXML
-    private Button bottoneCarica;
+    private ImageView bottoneCarica;
     @FXML
     private Button bottoneSalva;
 

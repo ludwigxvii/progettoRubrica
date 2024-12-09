@@ -59,7 +59,23 @@
                                        </contextMenu></TextField>
                                     <Button fx:id="aggiungiContatto" layoutX="166.0" layoutY="306.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="218.0" text="Aggiungi Contatto" />
                                     <Button fx:id="cancellaCampi" layoutX="587.0" layoutY="306.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="218.0" style="-fx-background-color: red;" text="Cancella" />
-                                    <Button layoutX="878.0" layoutY="352.0" mnemonicParsing="false" text="Save" />
+                                    <Button layoutX="850.0" layoutY="97.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="100.0">
+                                       <graphic>
+                                          <ImageView fx:id="bottoneCarica" fitHeight="68.0" fitWidth="73.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@icona2.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></Button>
+                                    <Button fx:id="bottoneSalva" layoutX="851.0" layoutY="198.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="100.0">
+                                       <graphic>
+                                          <ImageView fitHeight="44.0" fitWidth="66.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
                                  </children>
                               </Pane>
                            </content>
@@ -68,7 +84,7 @@
                            <content>
                               <Pane prefHeight="338.0" prefWidth="964.0" style="-fx-background-color: rgb(237, 137, 71); -fx-border-style: none;">
                                  <children>
-                                    <Label alignment="CENTER" layoutX="3.0" layoutY="14.0" prefHeight="41.0" prefWidth="961.0" text="Modifica o elimina un Contatto già presente." textAlignment="CENTER" textFill="WHITE">
+                                    <Label alignment="CENTER" layoutX="3.0" layoutY="14.0" prefHeight="41.0" prefWidth="961.0" text="Modifica o elimina un Contatto già presente,selezionandolo dalla tabella" textAlignment="CENTER" textFill="WHITE">
                                        <font>
                                           <Font size="29.0" />
                                        </font></Label>
@@ -99,7 +115,24 @@
                                     <Button fx:id="ricercaContatto" layoutX="174.0" layoutY="305.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="201.0" text="Ricerca Contatto" />
                                     <Button fx:id="eliminaContatto" layoutX="386.0" layoutY="305.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="196.0" style="-fx-background-color: red;" text="Elimina Contatto" />
                                     <Button fx:id="inviaModifiche" layoutX="588.0" layoutY="305.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="207.0" text="Invia Modifiche" />
-                                    <Button layoutX="878.0" layoutY="352.0" mnemonicParsing="false" text="Save" />
+                                    <Button fx:id="bottoneCarica" layoutX="848.0" layoutY="97.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="100.0">
+                                       <graphic>
+                                          <ImageView fitHeight="68.0" fitWidth="73.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@icona2.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="bottoneSalva" layoutX="849.0" layoutY="198.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="100.0">
+                                       <graphic>
+                                          <ImageView fitHeight="44.0" fitWidth="66.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
                                  </children>
                               </Pane>
                            </content>
@@ -126,32 +159,6 @@
                                     <TextField fx:id="nomeRicerca" layoutX="375.0" layoutY="97.0" />
                                     <TextField fx:id="cognomeRicerca" layoutX="375.0" layoutY="193.0" />
                                     <Button fx:id="ricercaContatto" layoutX="381.0" layoutY="287.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="218.0" text="Ricerca" />
-                                 </children>
-                              </Pane>
-                           </content>
-                        </Tab>
-                        <Tab closable="false" text="Salva/Carica">
-                           <content>
-                              <Pane prefHeight="342.0" prefWidth="964.0" style="-fx-background-color: rgb(237, 137, 71);">
-                                 <children>
-                                    <Label alignment="CENTER" layoutX="63.0" layoutY="14.0" prefHeight="89.0" prefWidth="838.0" text="Salva la Rubrica attualmente in uso nella Directory, oppure carica uno stato da un file già presente in essa." textAlignment="CENTER" textFill="WHITE" wrapText="true">
-                                       <font>
-                                          <Font size="29.0" />
-                                       </font>
-                                    </Label>
-                                    <Label layoutX="421.0" layoutY="152.0" text="Nome File" textFill="WHITE">
-                                       <font>
-                                          <Font size="27.0" />
-                                       </font>
-                                    </Label>
-                                    <TextField fx:id="nomeCarica" layoutX="367.0" layoutY="203.0" />
-                                    <Button fx:id="bottoneCarica" layoutX="172.0" layoutY="306.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="218.0" text="Carica Rubrica" />
-                                    <Label layoutX="603.0" layoutY="203.0" text=".txt" textFill="WHITE">
-                                       <font>
-                                          <Font size="27.0" />
-                                       </font>
-                                    </Label>
-                                    <Button fx:id="bottoneSalva" layoutX="587.0" layoutY="306.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="218.0" text="Salva Rubrica" />
                                  </children>
                               </Pane>
                            </content>

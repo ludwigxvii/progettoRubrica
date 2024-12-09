@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="488.0" prefWidth="974.0" style="-fx-background-color: rgb(192, 93, 27);" stylesheets="@stile.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.it.unisa.diem.softeng.FXMLErrorsController">
+    <children>
+      <AnchorPane id="base" minHeight="0.0" minWidth="0.0" prefHeight="564.0" prefWidth="925.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TabPane layoutX="-14.0" layoutY="-8.0" prefHeight="378.0" prefWidth="964.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-0.0">
+               <tabs>
+                  <Tab closable="false" text="Errore">
+                     <content>
+                        <Pane prefHeight="342.0" prefWidth="964.0" style="-fx-background-color: rgb(237, 137, 71);">
+                           <children>
+                              <Label fx:id="errorMessage" alignment="CENTER" layoutX="7.0" layoutY="76.0" prefHeight="48.0" prefWidth="961.0" text="Messaggio di Errore" textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font size="29.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="closebutton" layoutX="378.0" layoutY="297.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="218.0" style="-fx-background-color: red;" text="Cancella" />
+                           </children>
+                        </Pane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+    </children>
+</AnchorPane>
