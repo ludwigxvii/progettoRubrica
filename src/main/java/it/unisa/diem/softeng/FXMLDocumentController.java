@@ -6,6 +6,7 @@ package main.java.it.unisa.diem.softeng;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -13,6 +14,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import main.java.it.unisa.diem.softeng.rubricaClasses.Rubrica;
 
 /**
  * FXML Controller class
@@ -75,13 +77,37 @@ public class FXMLDocumentController implements Initializable {
     private ImageView bottoneCarica;
     @FXML
     private Button bottoneSalva;
+    @FXML
+    private Button bottoneCarica2;
+    @FXML
+    private Button bottoneSalva2;
 
-    /**
-     * Initializes the controller class.
-     */
+   
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+    public void initialize(URL url, ResourceBundle rb) {   
     }    
+Rubrica rubrica = new Rubrica();
+
+    @FXML
+    private void bottoneAggiungi(ActionEvent event) {
+        //rubrica.aggiungiContatto(nome.getText(),cognome.getText());
+
+    }
+
+    @FXML
+    private void bottoneCancella1(ActionEvent event) {
+    }
+
+    @FXML
+    private void eliminaContatto(ActionEvent event) {
+    }
+
+    @FXML
+    private void aggiuntaModifiche(ActionEvent event) {
+    }
+
+    @FXML
+    private void ricercaContatto(ActionEvent event) {
+    }
     
 }
