@@ -99,7 +99,7 @@ Rubrica rubrica = new Rubrica();
 
     @FXML
     private void bottoneAggiungi(ActionEvent event) {
-        //rubrica.aggiungiContatto(nome.getText(),cognome.getText());
+        rubrica.aggiungiContatto(nome.getText(),cognome.getText(),mail1.getText(),mail2.getText(),mail3.getText(),tel1.getText(),tel2.getText(),tel3.getText());
 
     }
 

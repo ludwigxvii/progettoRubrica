@@ -26,7 +26,7 @@ public class caricaScarica {
             ObjectOutputStream objo;
             objo = new ObjectOutputStream(outp);
         
-            for(Contatto contatto : rubrica.rubrica){
+            for(Contatto contatto : rubrica.contatti){
             objo.writeObject(contatto);
             }
             objo.close();
@@ -38,7 +38,7 @@ public class caricaScarica {
     ObjectInputStream objin;
     objin = new ObjectInputStream(inpt);
     while(objin.available()!=0){
-            rubrica.rubrica.add((Contatto)objin.readObject());
+            rubrica.contatti.add((Contatto)objin.readObject());
             }
             objin.close();
     }
