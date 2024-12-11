@@ -13,11 +13,11 @@ package main.java.it.unisa.diem.softeng.rubricaClasses;
 import main.java.it.unisa.diem.softeng.rubricaClasses.Contatto;
 import java.util.TreeSet;
 
-// Classe Rubrica
+
 public class Rubrica {
     private TreeSet<Contatto> contatti;
 
-    // Costruttore
+
     public Rubrica() {
         this.contatti = new TreeSet<>();
     }
