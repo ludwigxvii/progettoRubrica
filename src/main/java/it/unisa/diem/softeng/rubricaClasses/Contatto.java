@@ -10,43 +10,44 @@ package main.java.it.unisa.diem.softeng.rubricaClasses;
  *
  * @author Utente
  */
+import java.util.TreeSet;
+
+
 public class Contatto implements Comparable<Contatto> {
     private String nome;
     private String cognome;
-    private String telefono;
-    private String telefono2;
-    private String telefono3;
-    private String email;
-    private String email2;
-    private String email3;
+    private String[] telefoni; // Fino a 3 numeri di telefono
+    private String[] email;   // Fino a 3 email
 
 
-    public Contatto(String nome, String cognome, String telefono, String email) {
+    public Contatto(String nome, String cognome, String[] telefoni, String[] email) {
         this.nome = nome;
         this.cognome = cognome;
-        this.telefono = telefono;
-        this.telefono2 = telefono2;
-        this.telefono3 = telefono3;
+        this.telefoni = telefoni;
         this.email = email;
-        this.email2 = email2;
-        this.email3 = email3;
     }
 
 
-    public void modificaContatto(String nome, String cognome, String telefono, String email) {
+    public void modificaContatto(String nome, String cognome, String[] telefoni, String[] email) {
         if (nome != null) this.nome = nome;
         if (cognome != null) this.cognome = cognome;
-        if (telefono != null) this.telefono = telefono;
-        if (telefono2 != null) this.telefono2 = telefono2;
-        if (telefono3 != null) this.telefono3 = telefono3;
+        if (telefoni != null) this.telefoni = telefoni;
         if (email != null) this.email = email;
-        if (email2 != null) this.email2 = email2;
-        if (email3 != null) this.email3 = email3;
     }
 
     @Override
     public String toString() {
-        return nome + " " + cognome + ", Tel: " + telefono + ", Tel2: " + telefono2 + ", Tel3: " + telefono3 + ", Email: " + email + ", Email2: " + email2 + ", Email3: " + email3;
+        StringBuilder sb = new StringBuilder();
+        sb.append(nome).append(" ").append(cognome);
+        sb.append(", Telefono: ");
+        for (String t : telefoni) {
+            if (t != null) sb.append(t).append(" ");
+        }
+        sb.append(", Email: ");
+        for (String e : email) {
+            if (e != null) sb.append(e).append(" ");
+        }
+        return sb.toString().trim();
     }
 
     @Override
@@ -57,7 +58,6 @@ public class Contatto implements Comparable<Contatto> {
         }
         return this.nome.compareTo(altro.nome);
     }
-
 
     public String getNome() {
         return nome;
@@ -75,49 +75,19 @@ public class Contatto implements Comparable<Contatto> {
         this.cognome = cognome;
     }
 
-    public String getTelefono() {
-        return telefono;
+    public String[] getTelefoni() {
+        return telefoni;
     }
 
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
-    }
-    
-    public String getTelefono2() {
-        return telefono2;
+    public void setTelefoni(String[] telefoni) {
+        this.telefoni = telefoni;
     }
 
-    public void setTelefono2(String telefono2) {
-        this.telefono2 = telefono2;
-    }
-    
-    public String getTelefono3() {
-        return telefono3;
-    }
-
-    public void setTelefono3(String telefono3) {
-        this.telefono3 = telefono3;
-    }
-
-    public String getEmail() {
+    public String[] getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
+    public void setEmail(String[] email) {
         this.email = email;
-    }
-    public String getEmail2() {
-        return email;
-    }
-
-    public void setEmail2(String email2) {
-        this.email2 = email2;
-    }
-    public String getEmail3() {
-        return email3;
-    }
-
-    public void setEmail3(String email3) {
-        this.email3 = email3;
     }
 }

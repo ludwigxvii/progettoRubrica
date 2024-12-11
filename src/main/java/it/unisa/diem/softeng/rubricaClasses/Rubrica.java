@@ -13,17 +13,17 @@ package main.java.it.unisa.diem.softeng.rubricaClasses;
 import main.java.it.unisa.diem.softeng.rubricaClasses.Contatto;
 import java.util.TreeSet;
 
+// Classe Rubrica
 public class Rubrica {
     private TreeSet<Contatto> contatti;
 
-
+    // Costruttore
     public Rubrica() {
         this.contatti = new TreeSet<>();
     }
 
-
-    public void aggiungiContatto(String nome, String cognome, String telefono, String email) {
-        Contatto nuovoContatto = new Contatto(nome, cognome, telefono, email);
+    public void aggiungiContatto(String nome, String cognome, String[] telefoni, String[] email) {
+        Contatto nuovoContatto = new Contatto(nome, cognome, telefoni, email);
         if (contatti.add(nuovoContatto)) {
             System.out.println("Contatto aggiunto: " + nuovoContatto);
         } else {
@@ -42,11 +42,11 @@ public class Rubrica {
     }
 
 
-    public void modificaContatto(String nome, String cognome, String nuovoNome, String nuovoCognome, String nuovoTelefono, String nuovaEmail) {
+    public void modificaContatto(String nome, String cognome, String nuovoNome, String nuovoCognome, String[] nuoviTelefoni, String[] nuoveEmail) {
         Contatto contatto = ricercaContatto(nome, cognome);
         if (contatto != null) {
             contatti.remove(contatto);
-            contatto.modificaContatto(nuovoNome, nuovoCognome, nuovoTelefono, nuovaEmail);
+            contatto.modificaContatto(nuovoNome, nuovoCognome, nuoviTelefoni, nuoveEmail);
             contatti.add(contatto);
             System.out.println("Contatto modificato: " + contatto);
         } else {
