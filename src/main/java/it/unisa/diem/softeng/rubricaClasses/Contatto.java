@@ -1,16 +1,13 @@
 package main.java.it.unisa.diem.softeng.rubricaClasses;
 
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+@brief Questo file contiene l'implementazione della classe Contatto. In particolare, è stato utilizzato uno Stringbuilder per permettere al singolo contatto di contenere fino a 3 email e 3 numeri di telefono diversi
  */
 
 /**
  *
- * @author Utente
+ * @author Guido
  */
-import java.util.TreeSet;
 
 
 public class Contatto implements Comparable<Contatto> {
