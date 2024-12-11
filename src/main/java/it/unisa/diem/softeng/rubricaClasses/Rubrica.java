@@ -1,14 +1,13 @@
 package main.java.it.unisa.diem.softeng.rubricaClasses;
 
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+@brief Questo file contiene l'implementazione della classe Rubrica e delle funzioni aggiungiContatto, ricercaContatto, modificaContatto, eliminaContatto e visualizzaContatti, che nello specifico implementa
+la funzione di visita della rubrica. Per ulteriori dettagli riguardante il ruolo delle funzioni consultare la documentazione all'interno del progetto.
  */
 
 /**
  *
- * @author Utente
+ * @author Guido
  */
 import main.java.it.unisa.diem.softeng.rubricaClasses.Contatto;
 import java.util.TreeSet;
