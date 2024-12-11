@@ -1,32 +1,79 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package main.java.it.unisa.diem.softeng.rubricaClasses;
 
-import java.util.TreeSet;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 
 /**
  *
- * @author ludwig
+ * @author Utente
  */
+import main.java.it.unisa.diem.softeng.rubricaClasses.Contatto;
+import java.util.TreeSet;
+
 public class Rubrica {
-    TreeSet<Contatto> rubrica;
+    private TreeSet<Contatto> contatti;
+
 
     public Rubrica() {
-        this.rubrica = new TreeSet<>();
+        this.contatti = new TreeSet<>();
     }
-    public boolean aggiungiContatto(){
-    return true;
+
+
+    public void aggiungiContatto(String nome, String cognome, String telefono, String email) {
+        Contatto nuovoContatto = new Contatto(nome, cognome, telefono, email);
+        if (contatti.add(nuovoContatto)) {
+            System.out.println("Contatto aggiunto: " + nuovoContatto);
+        } else {
+            System.out.println("Il contatto esiste già: " + nuovoContatto);
+        }
     }
-    public boolean ricercaContatto(){
-    return true;
+
+
+    public Contatto ricercaContatto(String nome, String cognome) {
+        for (Contatto contatto : contatti) {
+            if (contatto.getNome().equals(nome) && contatto.getCognome().equals(cognome)) {
+                return contatto;
+            }
+        }
+        return null;
     }
-    public boolean modificaContatto(){
-    return true;
+
+
+    public void modificaContatto(String nome, String cognome, String nuovoNome, String nuovoCognome, String nuovoTelefono, String nuovaEmail) {
+        Contatto contatto = ricercaContatto(nome, cognome);
+        if (contatto != null) {
+            contatti.remove(contatto);
+            contatto.modificaContatto(nuovoNome, nuovoCognome, nuovoTelefono, nuovaEmail);
+            contatti.add(contatto);
+            System.out.println("Contatto modificato: " + contatto);
+        } else {
+            System.out.println("Contatto non trovato.");
+        }
     }
-    public boolean eliminaContatto(){
-    return true;
+
+
+    public void eliminaContatto(String nome, String cognome) {
+        Contatto contatto = ricercaContatto(nome, cognome);
+        if (contatto != null) {
+            contatti.remove(contatto);
+            System.out.println("Contatto eliminato: " + contatto);
+        } else {
+            System.out.println("Contatto non trovato.");
+        }
+    }
+
+
+    public void visualizzaContatti() {
+        if (!contatti.isEmpty()) {
+            System.out.println("Contatti nella rubrica:");
+            for (Contatto contatto : contatti) {
+                System.out.println(contatto);
+            }
+        } else {
+            System.out.println("La rubrica è vuota.");
+        }
     }
 }
-
