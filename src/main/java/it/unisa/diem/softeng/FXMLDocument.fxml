@@ -42,8 +42,8 @@
                                        <font>
                                           <Font size="27.0" />
                                        </font></Label>
-                                    <TextField fx:id="nome" layoutX="160.0" layoutY="88.0" />
-                                    <TextField fx:id="cognome" layoutX="577.0" layoutY="88.0" />
+                                    <TextField fx:id="labnome" layoutX="160.0" layoutY="88.0" />
+                                    <TextField fx:id="labcognome" layoutX="577.0" layoutY="88.0" />
                                     <TextField fx:id="mail1" layoutX="160.0" layoutY="138.0" promptText="  Indirizzo 1" />
                                     <TextField fx:id="mail2" layoutX="160.0" layoutY="188.0" promptText="  Indirizzo 2" />
                                     <TextField fx:id="mail3" layoutX="160.0" layoutY="238.0" promptText="  Indirizzo 3" />
@@ -59,7 +59,7 @@
                                        </contextMenu></TextField>
                                     <Button fx:id="aggiungiContatto" layoutX="166.0" layoutY="306.0" mnemonicParsing="false" onAction="#bottoneAggiungi" prefHeight="55.0" prefWidth="218.0" text="Aggiungi Contatto" />
                                     <Button fx:id="cancellaCampi" layoutX="587.0" layoutY="306.0" mnemonicParsing="false" onAction="#bottoneCancella1" prefHeight="55.0" prefWidth="218.0" style="-fx-background-color: red;" text="Cancella" />
-                                    <Button layoutX="850.0" layoutY="97.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="100.0">
+                                    <Button fx:id="caricaDaFile" layoutX="850.0" layoutY="97.0" mnemonicParsing="false" onAction="#caricaDaFile" prefHeight="80.0" prefWidth="100.0">
                                        <graphic>
                                           <ImageView fx:id="bottoneCarica" fitHeight="68.0" fitWidth="73.0" pickOnBounds="true">
                                              <image>
@@ -67,7 +67,7 @@
                                              </image>
                                           </ImageView>
                                        </graphic></Button>
-                                    <Button fx:id="bottoneSalva" layoutX="851.0" layoutY="198.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="100.0">
+                                    <Button fx:id="bottoneSalva" layoutX="851.0" layoutY="198.0" mnemonicParsing="false" onAction="#salvaSuFile" prefHeight="80.0" prefWidth="100.0">
                                        <graphic>
                                           <ImageView fitHeight="62.0" fitWidth="66.0" pickOnBounds="true">
                                              <image>
@@ -114,7 +114,7 @@
                                     <TextField fx:id="modTel3" layoutX="577.0" layoutY="238.0" promptText=" Numero 3" />
                                     <Button fx:id="eliminaContatto" layoutX="594.0" layoutY="299.0" mnemonicParsing="false" onAction="#eliminaContatto" prefHeight="55.0" prefWidth="196.0" style="-fx-background-color: red;" text="Elimina Contatto" />
                                     <Button fx:id="inviaModifiche" layoutX="171.0" layoutY="299.0" mnemonicParsing="false" onAction="#aggiuntaModifiche" prefHeight="55.0" prefWidth="207.0" text="Invia Modifiche" />
-                                    <Button fx:id="bottoneCarica2" layoutX="848.0" layoutY="97.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="100.0">
+                                    <Button fx:id="bottoneCarica2" layoutX="848.0" layoutY="97.0" mnemonicParsing="false" onAction="#caricaDaFile" prefHeight="80.0" prefWidth="100.0">
                                        <graphic>
                                           <ImageView fitHeight="68.0" fitWidth="73.0" pickOnBounds="true">
                                              <image>
@@ -123,7 +123,7 @@
                                           </ImageView>
                                        </graphic>
                                     </Button>
-                                    <Button fx:id="bottoneSalva2" layoutX="849.0" layoutY="198.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="100.0">
+                                    <Button fx:id="bottoneSalva2" layoutX="849.0" layoutY="198.0" mnemonicParsing="false" onAction="#salvaSuFile" prefHeight="80.0" prefWidth="100.0">
                                        <graphic>
                                           <ImageView fitHeight="61.0" fitWidth="66.0" pickOnBounds="true">
                                              <image>
@@ -170,10 +170,10 @@
                <children>
                   <TableView fx:id="tabellaRubrica" layoutX="87.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: rgb(237, 137, 71);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <columns>
-                      <TableColumn editable="false" minWidth="130.0" prefWidth="130.0" text="Nome" />
-                      <TableColumn editable="false" minWidth="170.0" prefWidth="217.0" text="Cognome" />
-                        <TableColumn editable="false" minWidth="170.0" prefWidth="288.0" sortable="false" text="E-Mail" />
-                        <TableColumn editable="false" minWidth="170.0" prefWidth="328.0" sortable="false" text="Numeri di telefono" />
+                      <TableColumn fx:id="nome" editable="false" minWidth="130.0" prefWidth="130.0" text="Nome" />
+                      <TableColumn fx:id="cognome" editable="false" minWidth="170.0" prefWidth="217.0" text="Cognome" />
+                        <TableColumn fx:id="email" editable="false" minWidth="170.0" prefWidth="288.0" sortable="false" text="E-Mail" />
+                        <TableColumn fx:id="telefoni" editable="false" minWidth="170.0" prefWidth="328.0" sortable="false" text="Numeri di telefono" />
                     </columns>
                   </TableView>
                </children>

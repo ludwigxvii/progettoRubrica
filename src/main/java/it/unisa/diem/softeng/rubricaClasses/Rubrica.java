@@ -14,19 +14,21 @@ import java.util.TreeSet;
 
 
 public class Rubrica {
-    private TreeSet<Contatto> contatti;
+    public TreeSet<Contatto> contatti;
 
 
     public Rubrica() {
         this.contatti = new TreeSet<>();
     }
 
-    public void aggiungiContatto(String nome, String cognome, String[] telefoni, String[] email) {
+    public boolean aggiungiContatto(String nome, String cognome, String[] telefoni, String[] email) {
         Contatto nuovoContatto = new Contatto(nome, cognome, telefoni, email);
         if (contatti.add(nuovoContatto)) {
             System.out.println("Contatto aggiunto: " + nuovoContatto);
+            return true;
         } else {
             System.out.println("Il contatto esiste già: " + nuovoContatto);
+            return false;
         }
     }
 
@@ -41,26 +43,30 @@ public class Rubrica {
     }
 
 
-    public void modificaContatto(String nome, String cognome, String nuovoNome, String nuovoCognome, String[] nuoviTelefoni, String[] nuoveEmail) {
+    public boolean modificaContatto(String nome, String cognome, String nuovoNome, String nuovoCognome, String[] nuoviTelefoni, String[] nuoveEmail) {
         Contatto contatto = ricercaContatto(nome, cognome);
         if (contatto != null) {
             contatti.remove(contatto);
             contatto.modificaContatto(nuovoNome, nuovoCognome, nuoviTelefoni, nuoveEmail);
             contatti.add(contatto);
             System.out.println("Contatto modificato: " + contatto);
+            return true;
         } else {
             System.out.println("Contatto non trovato.");
+            return false;
         }
     }
 
 
-    public void eliminaContatto(String nome, String cognome) {
+    public boolean eliminaContatto(String nome, String cognome) {
         Contatto contatto = ricercaContatto(nome, cognome);
         if (contatto != null) {
             contatti.remove(contatto);
             System.out.println("Contatto eliminato: " + contatto);
+            return true;
         } else {
             System.out.println("Contatto non trovato.");
+            return false;
         }
     }
 
