@@ -1,92 +1,123 @@
 package main.java.it.unisa.diem.softeng.rubricaClasses;
 
-
-import java.util.Arrays;
-import java.util.Objects;
-
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 
 /**
  *
- * @author ludwi
+ * @author Utente
  */
-public class Contatto {
+public class Contatto implements Comparable<Contatto> {
     private String nome;
     private String cognome;
-    private String mail[];
-    private String tel[];
+    private String telefono;
+    private String telefono2;
+    private String telefono3;
+    private String email;
+    private String email2;
+    private String email3;
 
-    public Contatto(String nome, String cognome,String mail1,String mail2,String mail3, String tel1,String tel2,String tel3) {
+
+    public Contatto(String nome, String cognome, String telefono, String email) {
         this.nome = nome;
         this.cognome = cognome;
-        this.mail[0]=mail1;
-        this.mail[1]=mail2;
-        this.mail[2]=mail3;
-        this.tel[0]=tel1;
-        this.tel[1]=tel2;
-        this.tel[2]=tel3;
-        
-       
+        this.telefono = telefono;
+        this.telefono2 = telefono2;
+        this.telefono3 = telefono3;
+        this.email = email;
+        this.email2 = email2;
+        this.email3 = email3;
     }
+
+
+    public void modificaContatto(String nome, String cognome, String telefono, String email) {
+        if (nome != null) this.nome = nome;
+        if (cognome != null) this.cognome = cognome;
+        if (telefono != null) this.telefono = telefono;
+        if (telefono2 != null) this.telefono2 = telefono2;
+        if (telefono3 != null) this.telefono3 = telefono3;
+        if (email != null) this.email = email;
+        if (email2 != null) this.email2 = email2;
+        if (email3 != null) this.email3 = email3;
+    }
+
+    @Override
+    public String toString() {
+        return nome + " " + cognome + ", Tel: " + telefono + ", Tel2: " + telefono2 + ", Tel3: " + telefono3 + ", Email: " + email + ", Email2: " + email2 + ", Email3: " + email3;
+    }
+
+    @Override
+    public int compareTo(Contatto altro) {
+        int confrontoCognome = this.cognome.compareTo(altro.cognome);
+        if (confrontoCognome != 0) {
+            return confrontoCognome;
+        }
+        return this.nome.compareTo(altro.nome);
+    }
+
 
     public String getNome() {
-        return this.nome;
-    }
-
-    public String getCognome() {
-        return this.cognome;
-    }
-
-    public String getMail(int n) {
-        return this.mail[n];
-    }
-
-    public String getTel(int n) {
-        return this.tel[n];
+        return nome;
     }
 
     public void setNome(String nome) {
         this.nome = nome;
     }
 
+    public String getCognome() {
+        return cognome;
+    }
+
     public void setCognome(String cognome) {
         this.cognome = cognome;
     }
 
-    public void setMail(String mail,int n) {
-        this.mail[n] = mail;
+    public String getTelefono() {
+        return telefono;
     }
 
-    public void setTel(String tel,int n) {
-        this.tel[n] = tel;
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+    
+    public String getTelefono2() {
+        return telefono2;
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Contatto other = (Contatto) obj;
-        if (!Objects.equals(this.nome, other.nome)) {
-            return false;
-        }
-        if (!Objects.equals(this.cognome, other.cognome)) {
-            return false;
-        }
-        if (!Arrays.deepEquals(this.mail, other.mail)) {
-            return false;
-        }
-        return Arrays.deepEquals(this.tel, other.tel);
+    public void setTelefono2(String telefono2) {
+        this.telefono2 = telefono2;
     }
     
-    
+    public String getTelefono3() {
+        return telefono3;
+    }
+
+    public void setTelefono3(String telefono3) {
+        this.telefono3 = telefono3;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    public String getEmail2() {
+        return email;
+    }
+
+    public void setEmail2(String email2) {
+        this.email2 = email2;
+    }
+    public String getEmail3() {
+        return email3;
+    }
+
+    public void setEmail3(String email3) {
+        this.email3 = email3;
+    }
 }
