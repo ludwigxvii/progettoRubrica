@@ -6,6 +6,8 @@ package main.java.it.unisa.diem.softeng;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.beans.binding.Bindings;
+import javafx.beans.binding.BooleanBinding;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -84,7 +86,14 @@ public class FXMLDocumentController implements Initializable {
 
    
     @Override
-    public void initialize(URL url, ResourceBundle rb) {   
+    public void initialize(URL url, ResourceBundle rb) { 
+        BooleanBinding campiCompilati = Bindings.createBooleanBinding(()->
+        (nome.getText().equals("") && cognome.getText().equals("")),
+                nome.textProperty(),
+                cognome.textProperty()
+         
+        );
+        aggiungiContatto.disableProperty().bind(campiCompilati);
     }    
 Rubrica rubrica = new Rubrica();
 

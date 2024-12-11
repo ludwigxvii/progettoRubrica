@@ -1,0 +1,15 @@
+JarIndex-Version: 1.0
+
+progettoRubricaIDS-1.2-SNAPSHOT.jar
+META-INF
+META-INF/maven
+META-INF/maven/it.unisa.diem.softeng
+META-INF/maven/it.unisa.diem.softeng/progettoRubricaIDS
+main
+main/java
+main/java/it
+main/java/it/unisa
+main/java/it/unisa/diem
+main/java/it/unisa/diem/softeng
+main/java/it/unisa/diem/softeng/rubricaClasses
+
