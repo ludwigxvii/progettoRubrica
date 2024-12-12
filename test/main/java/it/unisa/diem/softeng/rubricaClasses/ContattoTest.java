@@ -14,39 +14,37 @@ public class ContattoTest {
 
     @Test
     public void testCostruttore() {
-        Contatto contatto = new Contatto("Mario", "Rossi", "123456789", "", "", "mario.rossi@example.com", "", "");
+        String[] telefoni = {"123456789", "", ""};
+        String[] email = {"mario.rossi@example.com", "", ""};
+        Contatto contatto = new Contatto("Mario", "Rossi", telefoni, email);
+
         assertEquals("Mario", contatto.getNome());
         assertEquals("Rossi", contatto.getCognome());
-        assertEquals("123456789", contatto.getTelefono());
-        assertEquals("mario.rossi@example.com", contatto.getEmail());
-        assertNull(contatto.getTelefono2());
-        assertNull(contatto.getTelefono3());
-        assertNull(contatto.getEmail2());
-        assertNull(contatto.getEmail3());
+        assertArrayEquals(telefoni, contatto.getTelefoni());
+        assertArrayEquals(email, contatto.getEmail());
     }
 
     @Test
     public void testSetterAndGetter() {
-        Contatto contatto = new Contatto("Mario", "Rossi", "123456789", "", "", "mario.rossi@example.com", "", "");
+        String[] telefoni = {"123456789", "", ""};
+        String[] email = {"mario.rossi@example.com", "", ""};
+        Contatto contatto = new Contatto("Mario", "Rossi", telefoni, email);
 
-        contatto.setTelefono2("111222333");
-        contatto.setTelefono3("444555666");
-        contatto.setEmail2("mario.rossi2@example.com");
-        contatto.setEmail3("mario.rossi3@example.com");
+        String[] nuoviTelefoni = {"111222333", "444555666", ""};
+        String[] nuoveEmail = {"mario.rossi2@example.com", "mario.rossi3@example.com", ""};
+        contatto.setTelefoni(nuoviTelefoni);
+        contatto.setEmail(nuoveEmail);
 
-        assertEquals("111222333", contatto.getTelefono2());
-        assertEquals("444555666", contatto.getTelefono3());
-        assertEquals("mario.rossi2@example.com", contatto.getEmail2());
-        assertEquals("mario.rossi3@example.com", contatto.getEmail3());
+        assertArrayEquals(nuoviTelefoni, contatto.getTelefoni());
+        assertArrayEquals(nuoveEmail, contatto.getEmail());
     }
 
     @Test
     public void testToString() {
-        Contatto contatto = new Contatto("Mario", "Rossi", "123456789", "", "", "mario.rossi@example.com", "", "");
-        contatto.setTelefono2("111222333");
-        contatto.setTelefono3("444555666");
-        contatto.setEmail2("mario.rossi2@example.com");
-        contatto.setEmail3("mario.rossi3@example.com");
+        String[] telefoni = {"123456789", "987654321", ""};
+        String[] email = {"mario.rossi@example.com", "mario.rossi2@example.com", ""};
+        Contatto contatto = new Contatto("Mario", "Rossi", telefoni, email);
+String expected = "Mario Rossi, Telefono: 123456789, 111222333, 444555666, E-mail: mario.rossi@example.com, mario.rossi2@example.com, mario.rossi3@example.com;";
 
         String expected = "Mario Rossi, Telefono: 123456789, 111222333, 444555666, E-mail: mario.rossi@example.com, mario.rossi2@example.com, mario.rossi3@example.com;";
         assertEquals(expected, contatto.toString());
@@ -54,12 +52,22 @@ public class ContattoTest {
 
     @Test
     public void testCompareTo() {
-        Contatto contatto = new Contatto("Mario", "Rossi", "123456789", "", "", "mario.rossi@example.com", "", "");
-        Contatto contatto2 = new Contatto("Luigi", "Bianchi", "987654321", "", "", "luigi.bianchi@example.com", "", "");
-        Contatto contatto3 = new Contatto("Anna", "Rossi", "555555555", "", "", "anna.rossi@example.com", "", "");
+        String[] telefoni1 = {"123456789", "", ""};
+        String[] email1 = {"mario.rossi@example.com", "", ""};
+        Contatto contatto1 = new Contatto("Mario", "Rossi", telefoni1, email1);
 
-        assertTrue(contatto.compareTo(contatto2) > 0); // Rossi > Bianchi
-        assertTrue(contatto2.compareTo(contatto) < 0); // Bianchi < Rossi
-        assertTrue(contatto.compareTo(contatto3) > 0); // Mario > Anna
+        String[] telefoni2 = {"987654321", "", ""};
+        String[] email2 = {"luigi.bianchi@example.com", "", ""};
+        Contatto contatto2 = new Contatto("Luigi", "Bianchi", telefoni2, email2);
+
+        String[] telefoni3 = {"555555555", "", ""};
+        String[] email3 = {"anna.rossi@example.com", "", ""};
+        Contatto contatto3 = new Contatto("Anna", "Rossi", telefoni3, email3);
+
+        assertTrue(contatto1.compareTo(contatto2) > 0); // Rossi > Bianchi
+        assertTrue(contatto2.compareTo(contatto1) < 0); // Bianchi < Rossi
+        assertTrue(contatto1.compareTo(contatto3) > 0); // Mario > Anna
+        assertEquals(0, contatto1.compareTo(new Contatto("Mario", "Rossi", telefoni1, email1))); // Stesso cognome e nome
     }
 }
+
