@@ -3,10 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package main.java.it.unisa.diem.softeng.rubricaClasses;
+package test.java.it.unisa.diem.softeng.rubricaClasses;
+import main.it.unisa.diem.softeng.rubricaClasses.Contatto;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+
 
 public class ContattoTest {
 
@@ -42,8 +44,9 @@ public class ContattoTest {
         String[] telefoni = {"123456789", "987654321", ""};
         String[] email = {"mario.rossi@example.com", "mario.rossi2@example.com", ""};
         Contatto contatto = new Contatto("Mario", "Rossi", telefoni, email);
+String expected = "Mario Rossi, Telefono: 123456789, 111222333, 444555666, E-mail: mario.rossi@example.com, mario.rossi2@example.com, mario.rossi3@example.com;";
 
-        String expected = "Mario Rossi, Telefono: 123456789 987654321 , Email: mario.rossi@example.com mario.rossi2@example.com";
+        String expected = "Mario Rossi, Telefono: 123456789, 111222333, 444555666, E-mail: mario.rossi@example.com, mario.rossi2@example.com, mario.rossi3@example.com;";
         assertEquals(expected, contatto.toString());
     }
 

@@ -4,11 +4,14 @@
  */
 package main.java.it.unisa.diem.softeng;
 
+import java.io.File;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import javafx.stage.Window;
 
 /**
  *
@@ -24,6 +27,7 @@ public class ProgettoRubricaIDS extends Application {
         
         stage.setScene(scene);
         stage.show();
+          
     }
 
     /**

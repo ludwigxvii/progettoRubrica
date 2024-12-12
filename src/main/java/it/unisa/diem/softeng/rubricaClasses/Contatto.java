@@ -1,8 +1,7 @@
 package main.java.it.unisa.diem.softeng.rubricaClasses;
 
-/*
-@brief Questo file contiene l'implementazione della classe Contatto. In particolare, è stato utilizzato uno Stringbuilder per permettere al singolo contatto di contenere fino a 3 email e 3 numeri di telefono diversi
- */
+import java.io.Serializable;
+
 
 /**
  *
@@ -10,26 +9,39 @@ package main.java.it.unisa.diem.softeng.rubricaClasses;
  */
 
 
-public class Contatto implements Comparable<Contatto> {
+public class Contatto implements Comparable<Contatto>,Serializable {
     private String nome;
     private String cognome;
-    private String[] telefoni; // Fino a 3 numeri di telefono
-    private String[] email;   // Fino a 3 email
+    private String telefono1;
+    private String telefono2;
+    private String telefono3;// Fino a 3 numeri di telefono
+    private String email1;   // Fino a 3 email
+    private String email2;
+    private String email3;
 
 
-    public Contatto(String nome, String cognome, String[] telefoni, String[] email) {
+    public Contatto(String nome, String cognome, String telefono1, String telefono2, String telefono3, String email1, String email2, String email3) {
         this.nome = nome;
         this.cognome = cognome;
-        this.telefoni = telefoni;
-        this.email = email;
+        this.telefono1 = telefono1;
+        this.telefono2 = telefono2;
+        this.telefono3 = telefono3;
+        this.email1 = email1;
+        this.email2 = email2;
+        this.email3 = email3;
     }
 
 
-    public void modificaContatto(String nome, String cognome, String[] telefoni, String[] email) {
+    public void modificaContatto(String nome, String cognome, String telefono1, String telefono2, String telefono3,
+            String email1,String email2,String email3){
         if (nome != null) this.nome = nome;
         if (cognome != null) this.cognome = cognome;
-        if (telefoni != null) this.telefoni = telefoni;
-        if (email != null) this.email = email;
+        if (telefono1 != null) this.telefono1 = telefono1;
+        if (telefono2 != null) this.telefono2 = telefono2;
+        if (telefono3 != null) this.telefono3 = telefono3;
+        if (email1 != null) this.email1 = email1;
+        if (email2 != null) this.email2 = email2;
+        if (email3 != null) this.email3 = email3;
     }
 
     @Override
@@ -37,13 +49,13 @@ public class Contatto implements Comparable<Contatto> {
         StringBuilder sb = new StringBuilder();
         sb.append(nome).append(" ").append(cognome);
         sb.append(", Telefono: ");
-        for (String t : telefoni) {
-            if (t != null) sb.append(t).append(" ");
-        }
-        sb.append(", Email: ");
-        for (String e : email) {
-            if (e != null) sb.append(e).append(" ");
-        }
+        sb.append(telefono1).append(", ");
+        sb.append(telefono2).append(", ");
+        sb.append(telefono3).append("");
+        sb.append(", E-mail: ");
+        sb.append(email1).append(", ");
+        sb.append(email2).append(", ");
+        sb.append(email3).append(";");
         return sb.toString().trim();
     }
 
@@ -72,19 +84,42 @@ public class Contatto implements Comparable<Contatto> {
         this.cognome = cognome;
     }
 
-    public String[] getTelefoni() {
-        return telefoni;
+    public String getTelefono1() {
+        return telefono1;
+    }
+    public String getTelefono2() {
+        return telefono2;
+    }
+    public String getTelefono3() {
+        return telefono3;
     }
 
-    public void setTelefoni(String[] telefoni) {
-        this.telefoni = telefoni;
+    public void setTelefono1(String telefoni) {
+        this.telefono1 = telefoni;
+    }
+    public void setTelefono2(String telefoni) {
+        this.telefono2 = telefoni;
+    }
+    public void setTelefono3(String telefoni) {
+        this.telefono3 = telefoni;
     }
 
-    public String[] getEmail() {
-        return email;
+    public String getEmail1() {
+        return email1;
     }
-
-    public void setEmail(String[] email) {
-        this.email = email;
+    public String getEmail2() {
+        return email2;
+    }
+    public String getEmail3() {
+            return email3;
+        }
+    public void setEmail1(String email) {
+        this.email1 = email;
+    }
+        public void setEmail2(String email) {
+        this.email2 = email;
+    }
+            public void setEmail3(String email) {
+        this.email3 = email;
     }
 }

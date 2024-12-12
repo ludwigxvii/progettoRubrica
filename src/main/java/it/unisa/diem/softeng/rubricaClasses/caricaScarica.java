@@ -25,7 +25,7 @@ public class caricaScarica {
             outp = new FileOutputStream(filename);
             ObjectOutputStream objo;
             objo = new ObjectOutputStream(outp);
-        
+        objo.writeInt(rubrica.contatti.size());
             for(Contatto contatto : rubrica.contatti){
             objo.writeObject(contatto);
             }
@@ -37,8 +37,13 @@ public class caricaScarica {
     inpt = new FileInputStream(filename);
     ObjectInputStream objin;
     objin = new ObjectInputStream(inpt);
-    while(objin.available()!=0){
-            rubrica.contatti.add((Contatto)objin.readObject());
+    Contatto temp = null;
+    int lunghezza = (int)objin.readInt();
+    for(int i=0;i<lunghezza;i++){
+            temp = (Contatto) objin.readObject();
+            rubrica.aggiungiContatto(temp.getNome(),temp.getCognome(), temp.getTelefono1(),
+                    temp.getTelefono2(), temp.getTelefono3(), temp.getEmail1(),
+                    temp.getEmail2(), temp.getEmail3());
             }
             objin.close();
     }

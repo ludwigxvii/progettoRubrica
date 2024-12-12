@@ -69,21 +69,46 @@
 }
 .table-view .table-cell{
     -fx-text-fill: rgb(255, 255, 255);
-    -fx-background-color:rgb(237, 137, 71);
-    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 1, 2, 2, 3);
-    -fx-cursor:hand;
-}
-.table-view .table-cell .label{
-  
-    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 1, 2, 2, 3);
     
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 1, 2, 2, 3);
+    -fx-background-color: transparent;
+    -fx-border-bottom: 2px;
+    -fx-border-color:rgb(192, 93, 27);
+    -fx-cursor:hand;
 }
 
-.table-row-cell:selected .table-cell {
+
+.table-row-cell:selected {
     -fx-text-fill: rgb(255, 255, 255);
-    -fx-background-color:rgb(192, 93, 27);
+    -fx-background-color:rgb(255, 77, 0);
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 1, 2, 2, 3);
+    -fx-border-bottom: 2px;
+    
     -fx-cursor:hand;
+}
+.table-row-cell:odd{
+    -fx-background-color: -fx-table-cell-border-color,rgb(200, 112, 54);
+
+}
+.table-row-cell{
+    -fx-background-color: -fx-table-cell-border-color,rgb(192, 93, 27);
+
+}
+.table-row-cell:odd:selected {
+    -fx-text-fill: rgb(255, 255, 255);
+    -fx-background-color:rgb(255, 77, 0);
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 1, 2, 2, 3);
+    -fx-border-bottom: 2px;
+    
+    -fx-cursor:hand;
+}
+.table-view > .virtual-flow > .scroll-bar:vertical,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track-background, 
+.table-view > .virtual-flow > .scroll-bar:horizontal,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track-background {
+    -fx-background-color: transparent;
 }
 .table-view{
     -fx-background-color:rgb(192, 93, 27);
