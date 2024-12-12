@@ -21,8 +21,9 @@ public class Rubrica {
         this.contatti = new TreeSet<>();
     }
 
-    public boolean aggiungiContatto(String nome, String cognome, String[] telefoni, String[] email) {
-        Contatto nuovoContatto = new Contatto(nome, cognome, telefoni, email);
+    public boolean aggiungiContatto(String nome, String cognome, String telefono1, String telefono2, String telefono3,
+            String email1,String email2,String email3) {
+        Contatto nuovoContatto = new Contatto(nome, cognome, telefono1, telefono2, telefono3, email1, email2, email3);
         if (contatti.add(nuovoContatto)) {
             System.out.println("Contatto aggiunto: " + nuovoContatto);
             return true;
@@ -43,11 +44,12 @@ public class Rubrica {
     }
 
 
-    public boolean modificaContatto(String nome, String cognome, String nuovoNome, String nuovoCognome, String[] nuoviTelefoni, String[] nuoveEmail) {
+    public boolean modificaContatto(String nome, String cognome, String nuovoNome, String nuovoCognome, String nuoviTelefono1,
+            String nuoviTelefono2,  String nuoviTelefono3, String nuovaEmail1, String nuovaEmail2, String nuovaEmail3) {
         Contatto contatto = ricercaContatto(nome, cognome);
         if (contatto != null) {
             contatti.remove(contatto);
-            contatto.modificaContatto(nuovoNome, nuovoCognome, nuoviTelefoni, nuoveEmail);
+            contatto.modificaContatto(nuovoNome, nuovoCognome, nuoviTelefono1,nuoviTelefono2,nuoviTelefono3, nuovaEmail1, nuovaEmail2, nuovaEmail3);
             contatti.add(contatto);
             System.out.println("Contatto modificato: " + contatto);
             return true;
@@ -70,7 +72,16 @@ public class Rubrica {
         }
     }
 
+            public Rubrica tableConverter(){
+                Rubrica new_rubrica = new Rubrica();
+                for(Contatto cont : contatti){
+                    String nuovamail=cont.getEmail1()+"\n"+cont.getEmail2()+"\n"+cont.getEmail3();
+                    String nuovitel=cont.getTelefono1()+"\n"+cont.getTelefono2()+"\n"+cont.getTelefono3();
+                    new_rubrica.aggiungiContatto(cont.getNome(),cont.getCognome(), nuovitel,"","", nuovamail,"","");
+                }
 
+                    return new_rubrica;
+            }
     public void visualizzaContatti() {
         if (!contatti.isEmpty()) {
             System.out.println("Contatti nella rubrica:");

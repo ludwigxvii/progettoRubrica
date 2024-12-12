@@ -3,11 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package test.java.it.unisa.diem.softeng.rubricaClasses;
-import main.it.unisa.diem.softeng.rubricaClasses.Contatto;
-
-import org.junit.jupiter.api.Test;
+package main.java.it.unisa.diem.softeng.rubricaClasses;
 import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 
 
 public class ContattoTest {
@@ -17,12 +15,13 @@ public class ContattoTest {
         Contatto contatto = new Contatto("Mario", "Rossi", "123456789", "", "", "mario.rossi@example.com", "", "");
         assertEquals("Mario", contatto.getNome());
         assertEquals("Rossi", contatto.getCognome());
-        assertEquals("123456789", contatto.getTelefono());
-        assertEquals("mario.rossi@example.com", contatto.getEmail());
-        assertNull(contatto.getTelefono2());
-        assertNull(contatto.getTelefono3());
-        assertNull(contatto.getEmail2());
-        assertNull(contatto.getEmail3());
+        assertEquals("123456789", contatto.getTelefono1());
+        assertEquals("mario.rossi@example.com", contatto.getEmail1());
+        assertEquals("",contatto.getTelefono2());
+        assertEquals("",contatto.getTelefono3());
+        assertEquals("",contatto.getEmail2());
+        assertEquals("",contatto.getEmail3());
+        
     }
 
     @Test

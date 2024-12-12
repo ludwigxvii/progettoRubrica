@@ -1,7 +1,0 @@
-Manifest-Version: 1.0
-Archiver-Version: Plexus Archiver
-Created-By: Apache Maven 3.9.9
-Built-By: ludwi
-Build-Jdk: 17.0.5
-Main-Class: it.unisa.diem.softeng.Main
-

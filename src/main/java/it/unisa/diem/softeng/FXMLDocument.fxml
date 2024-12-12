@@ -76,6 +76,15 @@
                                           </ImageView>
                                        </graphic>
                                     </Button>
+                                    <Button fx:id="refresh" layoutX="14.0" layoutY="336.0" mnemonicParsing="false" onAction="#refresh" prefHeight="55.0" prefWidth="63.0">
+                                       <graphic>
+                                          <ImageView fitHeight="34.0" fitWidth="32.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@icon3.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
                                  </children>
                               </Pane>
                            </content>
@@ -113,7 +122,10 @@
                                     <TextField fx:id="modTel2" layoutX="577.0" layoutY="188.0" promptText=" Numero 2" />
                                     <TextField fx:id="modTel3" layoutX="577.0" layoutY="238.0" promptText=" Numero 3" />
                                     <Button fx:id="eliminaContatto" layoutX="594.0" layoutY="299.0" mnemonicParsing="false" onAction="#eliminaContatto" prefHeight="55.0" prefWidth="196.0" style="-fx-background-color: red;" text="Elimina Contatto" />
-                                    <Button fx:id="inviaModifiche" layoutX="171.0" layoutY="299.0" mnemonicParsing="false" onAction="#aggiuntaModifiche" prefHeight="55.0" prefWidth="207.0" text="Invia Modifiche" />
+                                    <Button fx:id="inviaModifiche" layoutX="171.0" layoutY="299.0" mnemonicParsing="false" onAction="#aggiuntaModifiche" prefHeight="55.0" prefWidth="207.0" text="Seleziona Contatto">
+                                       <font>
+                                          <Font name="System Bold" size="19.0" />
+                                       </font></Button>
                                     <Button fx:id="bottoneCarica2" layoutX="848.0" layoutY="97.0" mnemonicParsing="false" onAction="#caricaDaFile" prefHeight="80.0" prefWidth="100.0">
                                        <graphic>
                                           <ImageView fitHeight="68.0" fitWidth="73.0" pickOnBounds="true">
@@ -132,6 +144,19 @@
                                           </ImageView>
                                        </graphic>
                                     </Button>
+                                    <Button fx:id="refresh1" layoutX="14.0" layoutY="336.0" mnemonicParsing="false" onAction="#refresh" prefHeight="55.0" prefWidth="63.0">
+                                       <graphic>
+                                          <ImageView fitHeight="34.0" fitWidth="32.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@icon3.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="inviaModifichepart2" layoutX="171.0" layoutY="299.0" mnemonicParsing="false" onAction="#aggiuntaModifiche2" prefHeight="55.0" prefWidth="207.0" style="-fx-effect: none;" text="Invia Modifiche">
+                                       <font>
+                                          <Font size="22.0" />
+                                       </font></Button>
                                  </children>
                               </Pane>
                            </content>
@@ -170,10 +195,10 @@
                <children>
                   <TableView fx:id="tabellaRubrica" layoutX="87.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: rgb(237, 137, 71);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <columns>
-                      <TableColumn fx:id="nome" editable="false" minWidth="130.0" prefWidth="130.0" text="Nome" />
-                      <TableColumn fx:id="cognome" editable="false" minWidth="170.0" prefWidth="217.0" text="Cognome" />
-                        <TableColumn fx:id="email" editable="false" minWidth="170.0" prefWidth="288.0" sortable="false" text="E-Mail" />
-                        <TableColumn fx:id="telefoni" editable="false" minWidth="170.0" prefWidth="328.0" sortable="false" text="Numeri di telefono" />
+                      <TableColumn fx:id="cognome" editable="false" minWidth="130.0" prefWidth="191.0" text="Cognome" />
+                      <TableColumn fx:id="nome" editable="false" minWidth="170.0" prefWidth="184.0" text="Nome" />
+                        <TableColumn fx:id="email" editable="false" minWidth="170.0" prefWidth="290.0" sortable="false" text="E-Mail" />
+                        <TableColumn fx:id="telefoni" editable="false" minWidth="170.0" prefWidth="298.0" sortable="false" text="Numeri di telefono" />
                     </columns>
                   </TableView>
                </children>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="483.0" prefWidth="966.0" style="-fx-background-color: rgb(192, 93, 27);" stylesheets="@stile.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.it.unisa.diem.softeng.ERROREController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+    <AnchorPane id="base" minHeight="0.0" minWidth="0.0" prefHeight="484.0" prefWidth="964.0">
+         <children>
+            <TabPane layoutX="6.0" prefHeight="378.0" prefWidth="964.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-0.0" AnchorPane.topAnchor="0.0">
+              <tabs>
+                <Tab closable="false" text="ERRORE">
+                     <content>
+                        <Pane prefHeight="342.0" prefWidth="964.0" style="-fx-background-color: rgb(237, 137, 71);">
+                           <children>
+                              <Label fx:id="erroreText" alignment="CENTER" layoutX="81.0" layoutY="14.0" prefHeight="273.0" prefWidth="803.0" text="Testo di Errore" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font size="29.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="returno" layoutX="373.0" layoutY="303.0" mnemonicParsing="false" onAction="#chiudiFinestra" prefHeight="55.0" prefWidth="218.0" style="-fx-background-color: red;" text="Chiudi" />
+                           </children>
+                        </Pane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>
