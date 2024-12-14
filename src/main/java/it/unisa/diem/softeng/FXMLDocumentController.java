@@ -39,9 +39,10 @@ import main.java.it.unisa.diem.softeng.rubricaClasses.Rubrica;
 import main.java.it.unisa.diem.softeng.rubricaClasses.caricaScarica;
 
 /**
- * FXML Controller class
+ * @brief Questa è la classe che invoca i metodi e li implementa sulla Interfaccia di JavaFX
  *
  * @author ludwi
+ * @version 2.0
  */
 public class FXMLDocumentController implements Initializable {
 

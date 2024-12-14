@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
- */
 package main.java.it.unisa.diem.softeng;
 
 import java.net.URL;
@@ -14,8 +10,8 @@ import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 /**
- * FXML Controller class
- *
+ * @brief Questa Classe si occupa semplicemente di Visualizzare a schermo le info riguardanti errori come Aggiunta
+ * Contatti non riuscita  o ricerca di un contatto inesistente
  * @author ludwi
  */
 public class ERROREController implements Initializable {
@@ -28,8 +24,9 @@ public class ERROREController implements Initializable {
     private Button returno;
 
     /**
-     * Initializes the controller class.
-     * @param testo
+     * @brief Questo Setter viene evocato ogni volta prima che la scena venga visualizzata a schermo
+     * @param testo Il testo da visualizzare a Schermo
+     * @version 2.0
      */
     
     public void setLabel(String testo){
@@ -39,7 +36,10 @@ public class ERROREController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         
     }    
-
+/**
+ * 
+ * @brief Evento del pulsante che chiude la finestra a schermo
+ */
     @FXML
     private void chiudiFinestra(ActionEvent event) {
         Stage stage = (Stage) returno.getScene().getWindow();

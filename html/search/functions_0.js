@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['initialize_0',['initialize',['../classmain_1_1java_1_1it_1_1unisa_1_1diem_1_1softeng_1_1_f_x_m_l_document_controller.html#a67a884d72acad4c3089c4974fc0845df',1,'main::java::it::unisa::diem::softeng::FXMLDocumentController']]]
+  ['aggiungicontatto_0',['aggiungiContatto',['../classmain_1_1java_1_1it_1_1unisa_1_1diem_1_1softeng_1_1rubrica_classes_1_1_rubrica.html#a8c8fb1e0d6a479954b03ed2eab948e20',1,'main::java::it::unisa::diem::softeng::rubricaClasses::Rubrica']]]
 ];

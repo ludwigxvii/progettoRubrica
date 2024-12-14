@@ -3,12 +3,12 @@ package main.java.it.unisa.diem.softeng.rubricaClasses;
 import java.io.Serializable;
 
 
+
+
 /**
- *
+ * @brief Questa è la Calsse che definisce i contatti che saranno aggiunti alla Rubrica, con 1-3 Numeri di telefono ed 1-3 E-Mail
  * @author Guido
  */
-
-
 public class Contatto implements Comparable<Contatto>,Serializable {
     private String nome;
     private String cognome;
@@ -19,7 +19,17 @@ public class Contatto implements Comparable<Contatto>,Serializable {
     private String email2;
     private String email3;
 
-
+/**
+ * @brief Costruttore del Contatto
+ * @param nome
+ * @param cognome
+ * @param telefono1
+ * @param telefono2
+ * @param telefono3
+ * @param email1
+ * @param email2
+ * @param email3 
+ */
     public Contatto(String nome, String cognome, String telefono1, String telefono2, String telefono3, String email1, String email2, String email3) {
         this.nome = nome;
         this.cognome = cognome;
@@ -31,7 +41,17 @@ public class Contatto implements Comparable<Contatto>,Serializable {
         this.email3 = email3;
     }
 
-
+/**
+ * @brief Questo metdodo è utilizzato per modificare i campi di un contatto senza eliminarlo
+ * @param nome
+ * @param cognome
+ * @param telefono1
+ * @param telefono2
+ * @param telefono3
+ * @param email1
+ * @param email2
+ * @param email3 
+ */
     public void modificaContatto(String nome, String cognome, String telefono1, String telefono2, String telefono3,
             String email1,String email2,String email3){
         if (nome != null) this.nome = nome;
@@ -43,7 +63,10 @@ public class Contatto implements Comparable<Contatto>,Serializable {
         if (email2 != null) this.email2 = email2;
         if (email3 != null) this.email3 = email3;
     }
-
+/**
+ * @brief Stampa a schermo un contatto
+ * @return 
+ */
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
