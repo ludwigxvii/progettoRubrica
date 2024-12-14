@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: main.java.it.unisa.diem.softeng.rubricaClasses.caricaScaricaTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.063 sec - in main.java.it.unisa.diem.softeng.rubricaClasses.caricaScaricaTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.094 sec - in main.java.it.unisa.diem.softeng.rubricaClasses.caricaScaricaTest

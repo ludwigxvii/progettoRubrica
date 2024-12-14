@@ -25,6 +25,7 @@
 .tab:selected .tab-label{
     -fx-text-fill: white;
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 2, 2, 2, 3);
+    -fx-border-style: none;
 }
 .tab-header-background{
     -fx-background-color:  rgb(250, 196, 159);
@@ -91,6 +92,12 @@
 
 }
 .table-row-cell{
+    -fx-text-fill: rgb(255, 255, 255);
+    
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 1, 2, 2, 3);
+    -fx-background-color: transparent;
+    -fx-border-bottom: 2px;
+    -fx-border-color:rgb(192, 93, 27);
     -fx-background-color: -fx-table-cell-border-color,rgb(192, 93, 27);
 
 }
@@ -133,6 +140,13 @@
     -fx-border-style: none;
 }
 .tab-pane:focused > .tab-header-area > .headers-region > .tab:selected {
+    -fx-size:150%;
+    -fx-padding: 10px 50px 5px 50px;
+    
+    -fx-background-color: rgb(237, 137, 71);
+    -fx-background-radius:20px 50px 0px 0px;
+}
+.tab-pane > .tab-header-area > .headers-region > .tab:selected {
     -fx-size:150%;
     -fx-padding: 10px 50px 5px 50px;
     

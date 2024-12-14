@@ -41,7 +41,21 @@ public class Rubrica {
             return false;
         }
     }
-
+/**
+ * 
+ * @param nome
+ * @param cognome
+ * @return 
+ */
+    public Rubrica ricercaContatto_schermata(String nome, String cognome) {
+        Rubrica rubrica_esiti = new Rubrica();
+        for (Contatto contatto : contatti) {
+            if (contatto.getNome().startsWith(nome) && contatto.getCognome().startsWith(cognome)) {
+                rubrica_esiti.contatti.add(contatto);
+            }
+        }
+        return rubrica_esiti;
+    }
 /**
  * 
  * @param nome

@@ -162,6 +162,22 @@ public class FXMLDocumentController implements Initializable {
         tel1.setText("");
         tel2.setText("");
         tel3.setText("");
+        }else{
+            try {
+                Stage stage = new Stage();
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ERRORE.fxml"));
+                
+                Parent root = (Parent)fxmlLoader.load();
+                ERROREController controller = fxmlLoader.<ERROREController>getController();
+                controller.setLabel("Il Contatto è già presente in Rubrica, prova a modificarlo");
+                Scene scene = new Scene(root);
+                
+                stage.setScene(scene);
+                   
+                stage.show();
+            } catch (IOException ex) {
+                Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
        
     }
@@ -204,9 +220,10 @@ inviaModifichepart2.setVisible(true);
 
     @FXML
     private void ricercaContatto(ActionEvent event) {
-        if(rubrica.ricercaContatto(nomeRicerca.getText(), cognomeRicerca.getText())!=null){
+        if(!rubrica.ricercaContatto_schermata(nomeRicerca.getText(), cognomeRicerca.getText()).contatti.isEmpty()){
         tabellaRubrica.getItems().clear();
-        tabellaRubrica.getItems().add(rubrica.ricercaContatto(nomeRicerca.getText(), cognomeRicerca.getText()));
+        Rubrica rubrica_esiti = rubrica.ricercaContatto_schermata(nomeRicerca.getText(), cognomeRicerca.getText());
+        tabellaRubrica.getItems().addAll(rubrica_esiti.tableConverter().contatti);
     }else{
             try {
                 Stage stage = new Stage();
@@ -281,6 +298,14 @@ inviaModifichepart2.setVisible(true);
             tabellaRubrica.getItems().addAll(rubrica.tableConverter().contatti);
             inviaModifiche.setVisible(true);
 inviaModifichepart2.setVisible(false);
+ modNome.setText("");
+        modCognome.setText("");
+        modMail1.setText("");
+        modMail2.setText("");
+        modMail3.setText("");
+        modTel1.setText("");
+        modTel2.setText("");
+        modTel3.setText("");
     }
     
 }

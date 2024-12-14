@@ -16,6 +16,19 @@ public class RubricaTest {
         assertFalse(rubrica.aggiungiContatto("Mario", "Rossi", "123456789", "", "", "mario.rossi@example.com", "", ""));
     }
     @Test
+    public void testRicercaContatto_schermata() {
+        Rubrica rubrica = new Rubrica();
+        Contatto contatto = new Contatto("Mario", "Rossi", "123456789", "", "", "mario.rossi@example.com", "", "");
+        rubrica.aggiungiContatto("Mario", "Rossi", "123456789", "", "", "mario.rossi@example.com", "", "");
+        Rubrica rubrica_esiti  = rubrica.ricercaContatto_schermata("Mario", "Rossi");
+        assertNotNull(rubrica_esiti);
+        assertFalse(rubrica_esiti.contatti.isEmpty());
+        assertTrue(rubrica_esiti.contatti.contains(contatto));
+        
+        // Contatto inesistente
+        assertNull(rubrica.ricercaContatto("Luigi", "Bianchi"));
+    }
+    @Test
     public void testRicercaContatto() {
         Rubrica rubrica = new Rubrica();
         rubrica.aggiungiContatto("Mario", "Rossi", "123456789", "", "", "mario.rossi@example.com", "", "");
