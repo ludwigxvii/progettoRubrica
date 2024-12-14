@@ -199,6 +199,16 @@ public class FXMLDocumentController implements Initializable {
         rubrica.eliminaContatto(buffNome, buffCognome);
         tabellaRubrica.getItems().clear();
             tabellaRubrica.getItems().addAll(rubrica.tableConverter().contatti);
+            inviaModifichepart2.setVisible(false);
+            inviaModifiche.setVisible(true);
+ modNome.setText("");
+        modCognome.setText("");
+        modMail1.setText("");
+        modMail2.setText("");
+        modMail3.setText("");
+        modTel1.setText("");
+        modTel2.setText("");
+        modTel3.setText("");
     }
 
     @FXML
