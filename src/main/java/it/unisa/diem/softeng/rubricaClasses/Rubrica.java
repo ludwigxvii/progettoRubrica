@@ -42,11 +42,11 @@ public class Rubrica {
         }
     }
 /**
- * 
- * @param nome
- * @param cognome
- * @return 
- */
+     * @brief Effettua una ricerca di contatti nella rubrica che iniziano con un determinato nome e cognome.
+     * @param nome Nome da cercare (può essere una parte del nome completo)
+     * @param cognome Cognome da cercare (può essere una parte del cognome completo)
+     * @return Una nuova Rubrica contenente i contatti che corrispondono alla ricerca
+     */
     public Rubrica ricercaContatto_schermata(String nome, String cognome) {
         Rubrica rubrica_esiti = new Rubrica();
         for (Contatto contatto : contatti) {
@@ -57,11 +57,11 @@ public class Rubrica {
         return rubrica_esiti;
     }
 /**
- * 
- * @param nome
- * @param cognome
- * @return 
- */
+     * @brief Effettua una ricerca di un contatto esatto nella rubrica.
+     * @param nome Nome del contatto da cercare
+     * @param cognome Cognome del contatto da cercare
+     * @return Il contatto trovato o null se il contatto non esiste
+     */
     public Contatto ricercaContatto(String nome, String cognome) {
         for (Contatto contatto : contatti) {
             if (contatto.getNome().equals(nome) && contatto.getCognome().equals(cognome)) {
@@ -72,19 +72,19 @@ public class Rubrica {
     }
 
 /**
- * 
- * @param nome
- * @param cognome
- * @param nuovoNome
- * @param nuovoCognome
- * @param nuoviTelefono1
- * @param nuoviTelefono2
- * @param nuoviTelefono3
- * @param nuovaEmail1
- * @param nuovaEmail2
- * @param nuovaEmail3
- * @return 
- */
+     * @brief Modifica un contatto esistente nella rubrica.
+     * @param nome Nome del contatto da modificare
+     * @param cognome Cognome del contatto da modificare
+     * @param nuovoNome Nuovo nome del contatto
+     * @param nuovoCognome Nuovo cognome del contatto
+     * @param nuoviTelefono1 Nuovo primo numero di telefono
+     * @param nuoviTelefono2 Nuovo secondo numero di telefono
+     * @param nuoviTelefono3 Nuovo terzo numero di telefono
+     * @param nuovaEmail1 Nuova prima email
+     * @param nuovaEmail2 Nuova seconda email
+     * @param nuovaEmail3 Nuova terza email
+     * @return True se il contatto è stato modificato con successo, False se il contatto non è stato trovato
+     */
     public boolean modificaContatto(String nome, String cognome, String nuovoNome, String nuovoCognome, String nuoviTelefono1,
             String nuoviTelefono2,  String nuoviTelefono3, String nuovaEmail1, String nuovaEmail2, String nuovaEmail3) {
         Contatto contatto = ricercaContatto(nome, cognome);
@@ -101,11 +101,11 @@ public class Rubrica {
     }
 
 /**
- * 
- * @param nome
- * @param cognome
- * @return 
- */
+     * @brief Elimina un contatto dalla rubrica.
+     * @param nome Nome del contatto da eliminare
+     * @param cognome Cognome del contatto da eliminare
+     * @return True se il contatto è stato eliminato con successo, False se il contatto non è stato trovato
+     */
     public boolean eliminaContatto(String nome, String cognome) {
         Contatto contatto = ricercaContatto(nome, cognome);
         if (contatto != null) {
@@ -118,7 +118,7 @@ public class Rubrica {
         }
     }
 /**
- * @brief Questo è um metodo usato per convertire la rubrica in una versione leggibile in modo corretto dalla Tabella dell'Applicazione
+ * @brief Questo è un metodo usato per convertire la rubrica in una versione leggibile in modo corretto dalla Tabella dell'Applicazione
  * @return Rubrica che verrà letta dalla tabella
  */
             public Rubrica tableConverter(){
