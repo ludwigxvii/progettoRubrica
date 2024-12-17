@@ -1,7 +1,11 @@
 var searchData=
 [
-  ['main_0',['Main',['../classmain_1_1java_1_1it_1_1unisa_1_1diem_1_1softeng_1_1_main.html',1,'main::java::it::unisa::diem::softeng']]],
-  ['main_1',['main',['../classmain_1_1java_1_1it_1_1unisa_1_1diem_1_1softeng_1_1_progetto_rubrica_i_d_s.html#ace1611d6a6423d262f1a1d6001389c9a',1,'main::java::it::unisa::diem::softeng::ProgettoRubricaIDS']]],
-  ['main_3a_3ajava_3a_3ait_3a_3aunisa_3a_3adiem_3a_3asofteng_3a_3arubricaclasses_2',['rubricaClasses',['../namespacemain_1_1java_1_1it_1_1unisa_1_1diem_1_1softeng_1_1rubrica_classes.html',1,'main::java::it::unisa::diem::softeng']]],
-  ['modificacontatto_3',['modificaContatto',['../classmain_1_1java_1_1it_1_1unisa_1_1diem_1_1softeng_1_1rubrica_classes_1_1_contatto.html#af1f1f628f508c5e08e02f7bf108bdacf',1,'main.java.it.unisa.diem.softeng.rubricaClasses.Contatto.modificaContatto()'],['../classmain_1_1java_1_1it_1_1unisa_1_1diem_1_1softeng_1_1rubrica_classes_1_1_rubrica.html#a5acdddf7e82221bd15f6b47acd059bd7',1,'main.java.it.unisa.diem.softeng.rubricaClasses.Rubrica.modificaContatto()']]]
+  ['getcognome_0',['getCognome',['../classmain_1_1java_1_1it_1_1unisa_1_1diem_1_1softeng_1_1rubrica_classes_1_1_contatto.html#a02a6f05cc95c51945f1bf0e68293a7ed',1,'main::java::it::unisa::diem::softeng::rubricaClasses::Contatto']]],
+  ['getemail1_1',['getEmail1',['../classmain_1_1java_1_1it_1_1unisa_1_1diem_1_1softeng_1_1rubrica_classes_1_1_contatto.html#aea4a78afd38de76e4bb653e97565fbd5',1,'main::java::it::unisa::diem::softeng::rubricaClasses::Contatto']]],
+  ['getemail2_2',['getEmail2',['../classmain_1_1java_1_1it_1_1unisa_1_1diem_1_1softeng_1_1rubrica_classes_1_1_contatto.html#adf0ab31072d1463ef9aa36b1a1fa662e',1,'main::java::it::unisa::diem::softeng::rubricaClasses::Contatto']]],
+  ['getemail3_3',['getEmail3',['../classmain_1_1java_1_1it_1_1unisa_1_1diem_1_1softeng_1_1rubrica_classes_1_1_contatto.html#ad4f97a953c0d144b1c7a53060422d5a7',1,'main::java::it::unisa::diem::softeng::rubricaClasses::Contatto']]],
+  ['getnome_4',['getNome',['../classmain_1_1java_1_1it_1_1unisa_1_1diem_1_1softeng_1_1rubrica_classes_1_1_contatto.html#affdc1683fb9f80baf8c871dfea9a3361',1,'main::java::it::unisa::diem::softeng::rubricaClasses::Contatto']]],
+  ['gettelefono1_5',['getTelefono1',['../classmain_1_1java_1_1it_1_1unisa_1_1diem_1_1softeng_1_1rubrica_classes_1_1_contatto.html#a39541a11e731c5519730332e43279df6',1,'main::java::it::unisa::diem::softeng::rubricaClasses::Contatto']]],
+  ['gettelefono2_6',['getTelefono2',['../classmain_1_1java_1_1it_1_1unisa_1_1diem_1_1softeng_1_1rubrica_classes_1_1_contatto.html#a1225cd22fa549fb30ced62475b147d03',1,'main::java::it::unisa::diem::softeng::rubricaClasses::Contatto']]],
+  ['gettelefono3_7',['getTelefono3',['../classmain_1_1java_1_1it_1_1unisa_1_1diem_1_1softeng_1_1rubrica_classes_1_1_contatto.html#a66466a42c183c7cfad2c0226c811c86a',1,'main::java::it::unisa::diem::softeng::rubricaClasses::Contatto']]]
 ];

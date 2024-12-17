@@ -31,5 +31,23 @@ var menudata={children:[
 {text:"Indice dei tipi composti",url:"classes.html"},
 {text:"Gerarchia delle classi",url:"hierarchy.html"},
 {text:"Membri dei composti",url:"functions.html",children:[
-{text:"Tutto",url:"functions.html"},
-{text:"Funzioni",url:"functions_func.html"}]}]}]}
+{text:"Tutto",url:"functions.html",children:[
+{text:"a",url:"functions.html#index_a"},
+{text:"c",url:"functions.html#index_c"},
+{text:"e",url:"functions.html#index_e"},
+{text:"g",url:"functions.html#index_g"},
+{text:"m",url:"functions.html#index_m"},
+{text:"r",url:"functions.html#index_r"},
+{text:"s",url:"functions.html#index_s"},
+{text:"t",url:"functions.html#index_t"},
+{text:"v",url:"functions.html#index_v"}]},
+{text:"Funzioni",url:"functions_func.html",children:[
+{text:"a",url:"functions_func.html#index_a"},
+{text:"c",url:"functions_func.html#index_c"},
+{text:"e",url:"functions_func.html#index_e"},
+{text:"g",url:"functions_func.html#index_g"},
+{text:"m",url:"functions_func.html#index_m"},
+{text:"r",url:"functions_func.html#index_r"},
+{text:"s",url:"functions_func.html#index_s"},
+{text:"t",url:"functions_func.html#index_t"},
+{text:"v",url:"functions_func.html#index_v"}]}]}]}]}
